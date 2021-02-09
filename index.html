@@ -6,14 +6,293 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9MEKDJNL6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script type="text/javascript">
+$(function() {
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
-  gtag('config', 'G-J9MEKDJNL6');
+const d = new Date();
+var saleCode = monthNames[d.getMonth()] + "WebSale";
+
+  var courses = {
+    course: [
+      {
+        "image": "https://img-b.udemycdn.com/course/750x422/3832608_cd4f.jpg",
+        "name": "Complete Weather App in SwiftUI, MVVM, Lottie Animation",
+        "desc": "In this course you will learn to create complete iOS weather app from scratch. ",
+        "link": "https://www.udemy.com/course/complete-weather-app-in-swiftui-mvvm-lottie-animation/?couponCode=" + saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3815612_a718.jpg",
+      "name": "Build Fandango Clone in SwiftUI, Combine, iOS 14",
+      "desc": "In this course you will be building entire movies app from scratch.",
+      "link": "https://www.udemy.com/course/build-fandango-clone-in-swiftui-combine-ios-14/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3798616_2a7f_2.jpg",
+      "name": "Build Complete Todo List App with Generics iOS, Swift",
+      "desc": "Learn to build TODO list app with programmatic layouts.",
+      "link": "https://www.udemy.com/course/build-complete-todo-list-app-with-generics-ios-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3782458_d190.jpg",
+      "name": "Build Full Music Player in Swift, iOS 14 and Xcode 12",
+      "desc": "This course you will learn about AVFoundation and how to play music using AVAudio Player.",
+      "link": "https://www.udemy.com/course/build-full-music-player-in-swift-ios-14-and-xcode-12/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3755312_6a02_3.jpg",
+      "name": "Mastering Generics with Example in iOS and Swift",
+      "desc": "Generics are the most powerful features in iOS and Swift. In this course, you will learn all about generics.",
+      "link": "https://www.udemy.com/course/mastering-generics-with-example-in-ios-and-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3738706_1f0e.jpg",
+      "name": "Build News App in iOS 14: Start to Finish Programmatically",
+      "desc": "We will work with News.API to build a news client in iOS and Swift.",
+      "link": "https://www.udemy.com/course/build-news-app-in-ios-14-start-to-finish-programmatically/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3731594_f5f1.jpg",
+      "name": "Build Photos App for iOS in Swift 5.3 and Xcode 12",
+      "desc": "Let's build photos app with programmatic UI and MVVM design patterns in iOS and Swift.",
+      "link": "https://www.udemy.com/course/build-photos-app-for-ios-in-swift-53-and-xcode-12/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3696518_3f27.jpg",
+      "name": "Cracking Coding Interview & Algorithm Design in Swift (2021)",
+      "desc": "Ace coding interview at any small to large tech company such as Google, Microsoft, Facebook, Amazon, Airbnb",
+      "link": "https://www.udemy.com/course/cracking-coding-interview-algorithm-design-in-swift-2020/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3561613_53c5.jpg",
+      "name": "Grocery Shopper App using Realm, SwiftUI in iOS",
+      "desc": "Let's' build grocery shopper app in iOS with Realm and SwiftUI.",
+      "link": "https://www.udemy.com/course/grocery-shopper-app-using-realm-swiftui-in-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3559829_1a09.jpg",
+      "name": "PencilKit Drawing in SwiftUI for iOS and iPadOS",
+      "desc": "Learn to build PencilKit app in SwiftUI. Also learn to save documents in CoreData.",
+      "link": "https://www.udemy.com/course/pencilkit-drawing-in-swiftui-for-ios-and-ipados/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3531164_ba09.jpg",
+      "name": "Speech Recognition in SwiftUI, iOS Core Data : Speech Todo",
+      "desc": "You will learn Speech Framework along with Core Data and SwiftUI to build a complete app from start to finish.",
+      "link": "https://www.udemy.com/course/speech-recognition-in-swiftui-ios-core-data-speech-todo/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3526160_c807.jpg",
+      "name": "Writing Reusable Framework in iOS, Swift and Cocoapods",
+      "desc": "Learn to write framework and publish them to Cocoapods community.",
+      "link": "https://www.udemy.com/course/writing-reusable-framework-in-ios-swift-and-cocoapods/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3512968_2204.jpg",
+      "name": "Secure Notes App in SwiftUI, Keychain, FaceID, TouchID",
+      "desc": "Learn to build notes app that is secured behind biometric authentication.",
+      "link": "https://www.udemy.com/course/secure-notes-app-in-swiftui-keychain-faceid-touchid/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3498002_a0d7.jpg",
+      "name": "Practical Numpy: Beginners to Advanced",
+      "desc": "Learn all about Numpy. Best and most essential  tool in data scientist's toolkit.",
+      "link": "https://www.udemy.com/course/practical-numpy-beginners-to-advanced/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3497336_32f7.jpg",
+      "name": "Dark Mode for iOS in Swift",
+      "desc": "Add Dark Mode support into your iOS apps. Learn all about iOS Dark Mode.",
+      "link": "https://www.udemy.com/course/dark-mode-for-ios-in-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3497286_5915.jpg",
+      "name": "Practical MVVM & Core Data in Swift and iOS",
+      "desc": "In this video course, you will learn about data persistence in iOS with Core Data.",
+      "link": "https://www.udemy.com/course/practical-mvvm-core-data-in-swift-and-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494864_359f.jpg",
+      "name": "Google Flutter Common Tips and Tricks",
+      "desc": "Learn to solve common issues in Flutter and their resolutions.",
+      "link": "https://www.udemy.com/course/google-flutter-common-tips-and-tricks/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494788_8a7a.jpg",
+      "name": "Practical Flutter Apps for Android & iOS",
+      "desc": "Learn to build practical apps in Flutter and deploy them for both iOS and Android platforms.",
+      "link": "https://www.udemy.com/course/practical-flutter-apps-for-android-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494774_0765.jpg",
+      "name": "Practical Dart for Flutter",
+      "desc": "Dart is the language used to write Flutter apps. Learn all about Dart in this course.",
+      "link": "https://www.udemy.com/course/practical-dart-for-flutter/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494760_ec4d.jpg",
+      "name": "Build Cross Platform Movie and Calculator app in Flutter",
+      "desc": "Build Fandango and Calculator apps from start to finish in Flutter.",
+      "link": "https://www.udemy.com/course/build-cross-platform-movie-and-calculator-app-in-flutter/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3494548_4ed5.jpg",
+      "name": "Cross Platform Development for Android and iOS with Flutter",
+      "desc": "Build cross platform apps with Flutter. Flutter apps work on iOS, Android and Web.",
+      "link": "https://www.udemy.com/course/cross-platform-development-for-android-and-ios-with-flutter/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494514_09e3.jpg",
+      "name": "Practical Approach to MVVM Design Pattern in iOS and Swift",
+      "desc": "MVVM design pattern is the next step towards the future of apps. You will learn about MVVM by building apps in this course.",
+      "link": "https://www.udemy.com/course/practical-approach-to-mvvm-design-pattern-in-ios-and-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3494390_efff.jpg",
+      "name": "Practical Codable Protocol in Swift and iOS",
+      "desc": "Learn about JSON serialization and deserialization in object oriented manner with Codable in iOS.",
+      "link": "https://www.udemy.com/course/practical-codable-protocol-in-swift-and-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3483140_788a.jpg",
+      "name": "Data Structures and Algorithms in Swift and iOS",
+      "desc": "This course will help you build your programming foundation with Data Structures and Algorithms in Swift. ",
+      "link": "https://www.udemy.com/course/data-structures-and-algorithms-in-swift-and-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3483014_d924.jpg",
+      "name": "Build Journal iOS App in Swift, Firebase, FaceID & Keychain",
+      "desc": "Learn about Firebase, TouchID, FaceID and Keychain security in iOS by build an app from scratch.",
+      "link": "https://www.udemy.com/course/build-journal-ios-app-in-swift-firebase-faceid-keychain/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3482958_2c1b.jpg",
+      "name": "Practical UICollectionView in iOS and Swift",
+      "desc": "In this course you will learn to harness the power of Collection Views, its customizations by examples.",
+      "link": "https://www.udemy.com/course/practical-uicollectionview-in-ios-and-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3482308_21c8.jpg",
+      "name": "MVVM in SwiftUI: Build News App with NewsAPI & Combine",
+      "desc": "We will be building real world News app with News.org API in SwiftUI and MVVM design pattern.",
+      "link": "https://www.udemy.com/course/mvvm-in-swiftui-build-news-app-with-newsapi-combine/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3477868_15b7.jpg",
+      "name": "iOS 14 Calculator App in SwiftUI with Locale Support",
+      "desc": "Let's build clone of iOS's calculator app in SwiftUI. This app will also have Locale support.",
+      "link": "https://www.udemy.com/course/ios-14-calculator-app-in-swiftui-with-locale-support/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3477670_c278.jpg",
+      "name": "Banking App: Complex Layout in SwiftUI 2, iOS 14",
+      "desc": "Building UI in SwiftUI is fun. We will build a really complex Banking UI in this video course.",
+      "link": "https://www.udemy.com/course/banking-app-complex-layout-in-swiftui-2-ios-14/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3459938_673f.jpg",
+      "name": "SwiftUI in Depth: Practical Code Examples in SwiftUI",
+      "desc": "Learn all about SwiftUI and its views in this course along with data binding using new Combine framework.",
+      "link": "https://www.udemy.com/course/swiftui-in-depth-practical-code-examples-in-swiftui/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3459756_de9a.jpg",
+      "name": "iOS 14 Swift UI 2 Birthday App using Core Data with CRUD",
+      "desc": "Let's build birthday reminder app from start to end in SwiftUI and CoreData.",
+      "link": "https://www.udemy.com/course/ios-14-swift-ui-2-birthday-app-using-core-data-with-crud/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3459456_60f5.jpg",
+      "name": "Advanced Machine Learning in iOS, Swift, Create ML, Core ML",
+      "desc": "Artificial Intelligence and Machine Learning is all around us. Learn what iOS can do for you with its own ML ecosystem.",
+      "link": "https://www.udemy.com/course/advanced-machine-learning-in-ios-swift-create-ml-core-ml/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3459120_bd34.jpg",
+      "name": "iOS 14 Multi Platform App in SwiftUI 2 for iOS, iPad OS, Mac",
+      "desc": "Learn to develop multi-platform news app using hacker news api and parse data using Combine.",
+      "link": "https://www.udemy.com/course/ios-14-multi-platform-app-in-swiftui-2-for-ios-ipad-os-mac/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3441108_0ea0.jpg",
+      "name": "Localization in iOS 13 and iOS 14 using Swift",
+      "desc": "Build apps for the world. In this course you will learn to localize and internationalize your apps.",
+      "link": "https://www.udemy.com/course/localization-in-ios-13-and-ios-14-using-swift/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3441074_0231.jpg",
+      "name": "iOS 14 Crypto Currency Tracker, SwiftUI & Combine Framework",
+      "desc": "Learn to develop Crypto Currency Tracker App with SwiftUI and Combine.",
+      "link": "https://www.udemy.com/course/ios-14-crypto-currency-tracker-swiftui-combine-framework/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3440698_0091.jpg",
+      "name": "iOS 14 Matched Geometry Effect Layouts in SwiftUI 2",
+      "desc": "In this video series we will learn to create hero animation by using newest api called matched geometry effect.",
+      "link": "https://www.udemy.com/course/ios-14-matched-geometry-effect-layouts-in-swiftui-2/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3435010_5906.jpg",
+      "name": "Neumorphic Design Todo List in SwiftUI, MVVM and Core Data",
+      "desc": "Neumorphic design is the combination of flat design and skeuomorphism. Develop Neumorphic design in SwiftUI.",
+      "link": "https://www.udemy.com/course/neumorphic-design-todo-list-in-swiftui-mvvm-and-core-data-o/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3434938_518f.jpg",
+      "name": "CoreData in SwiftUI: Build Real App while Learning iOS",
+      "desc": "Learn to build real world app using SwiftUI and CoreData. ",
+      "link": "https://www.udemy.com/course/coredata-in-swiftui-build-real-app-while-learning-ios/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3422454_0af5.jpg",
+      "name": "Practical Apache Airflow",
+      "desc": "Apache Airflow is a platform to author, schedule and monitor workflows. Learn all about it in this video course.",
+      "link": "https://www.udemy.com/course/practical-apache-airflow/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3421968_6fc4.jpg",
+      "name": "Fitness App with Login Screen Layout in SwiftUI 2.0, iOS 14",
+      "desc": "Develop complex charts and UI with SwiftUI while developing Fitness App.",
+      "link": "https://www.udemy.com/course/fitness-app-with-login-screen-layout-in-swiftui-20-ios-14/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-b.udemycdn.com/course/750x422/3395876_37f9.jpg",
+      "name": "Practical Angular2 and above Integration With Web API",
+      "desc": "Learn to communicate Angular 6 (formally Angular2) application with server side API’s like Web Api.",
+      "link": "https://www.udemy.com/course/practical-angular2-and-above-integration-with-web-api/?couponCode="+saleCode
+    },
+    {
+      "image": "https://img-a.udemycdn.com/course/750x422/3365270_3610.jpg",
+      "name": "iOS 14 WidgetKit in SwiftUI: Xcode 12 Beta",
+      "desc": "Know all about iOS 14 widgets and WidgetKit in SwiftUI by building real world examples.",
+      "link": "https://www.udemy.com/course/ios-14-widgetkit-in-swiftui-xcode-12-beta/?couponCode="+saleCode
+    },
+  ]
+  }
+
+  var i = 0;
+  while (i <= courses.course.length + 1) {
+    var elem = "<div class='row'>"
+    //$("#courseList").append("<div class='row'>");
+    elem = elem + "<div class='card col-md-5'><img src='"+courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>"+ courses.course[i]["desc"] + " <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a></div></div>";
+
+    i = i + 1;
+
+    if (i >= courses.course.length) {
+      elem = elem + "</div>";
+      break;
+    //  return;
+    }
+
+    elem = elem + "<div class='card col-md-5'><img src='"+ courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>" + courses.course[i]["desc"]+" <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a></div></div>";
+    elem = elem + "</div>";
+
+    $("#courseList").append(elem);
+    i = i + 1;
+  }
+});
 </script>
 </head>
 
@@ -60,43 +339,8 @@
 </section>
 <!---------------------- Courses Section ----------------------->
 <section id="courses">
-<div class="container">
-  <div class="row">
-    <div class="card col-md-5">
-      <img src="images/courses/CodingInterViewSwift.jpg" alt="Cracking Coding Interview in Swift" class="card-img-top">
-      <div class="card-body">
-        <h4>Cracking Coding Interview & Algorithm Design in Swift</h4>
-        <p>This course will teach you how to ace coding interview at any small to large tech company such as Google, Microsoft, Facebook, Amazon, Uber, Airbnb, etc. <br> <br></p>
-        <a class="btn btn-primary" href="https://www.udemy.com/course/cracking-coding-interview-algorithm-design-in-swift-2020/?referralCode=054706A4726C4D693682" target="_blank">View Course</a>
-      </div>
-    </div>
-    <div class="card col-md-5">
-      <img src="images/courses/GroceryShopperSwiftUI.jpg" alt="Grocery Shopper App using Realm, SwiftUI in iOS" class="card-img-top">
-      <div class="card-body">
-        <h4>Grocery Shopper App using Realm, SwiftUI in iOS</h4>
-        <p>Realm is an open source object database management system. In this course you will learn to create an app from start to end, learning clean way of coding apps in SwiftUI.</p>
-        <a class="btn btn-primary" href="https://www.udemy.com/course/grocery-shopper-app-using-realm-swiftui-in-ios/?referralCode=B0FC3E630024AA284351" target="_blank">View Course</a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="card col-md-5">
-      <img src="images/courses/PencilKitSwiftUI.jpg" alt="PencilKit Drawing in SwiftUI for iOS and iPadOS" class="card-img-top">
-      <div class="card-body">
-        <h4>PencilKit Drawing in SwiftUI for iOS and iPadOS</h4>
-        <p>In this course you will learn how to create a drawing app in SwiftUI using PencilKit. This is hands on course where you will learn to create app from start to finish while learning enterprise level coding practices on the way.</p>
-        <a class="btn btn-primary" href="https://www.udemy.com/course/pencilkit-drawing-in-swiftui-for-ios-and-ipados/?referralCode=CEB2C44E542A680D6C92" target="_blank">View Course</a>
-      </div>
-    </div>
-    <div class="card col-md-5">
-      <img src="images/courses/SpeechRecognitionSwiftUI.jpg" alt="Speech Recognition in SwiftUI, iOS Core Data : Speech Todo" class="card-img-top">
-      <div class="card-body">
-        <h4>Speech Recognition in SwiftUI, iOS Core Data : Speech Todo</h4>
-        <p>iOS Speech framework is a powerful engine that supports Siri speech transcription. All of its APIs are available for you as iOS developer to use as well. In this course we will combine power of Speech Framework along with Core Data and SwiftUI to build a complete app from start to finish.</p>
-        <a class="btn btn-primary" href="https://www.udemy.com/course/speech-recognition-in-swiftui-ios-core-data-speech-todo/?referralCode=0D28A372B2C48A553BF2" target="_blank">View Course</a>
-      </div>
-    </div>
-  </div>
+<div id="courseList" class="container">
+
 </div>
 </section>
 <!------------------ contact us section ---------------------->
