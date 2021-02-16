@@ -21,6 +21,7 @@ var saleCode = monthNames[d.getMonth()] + "WebSale";
         "image": "https://img-b.udemycdn.com/course/750x422/3832608_cd4f.jpg",
         "name": "Complete Weather App in SwiftUI, MVVM, Lottie Animation",
         "desc": "In this course you will learn to create complete iOS weather app from scratch. ",
+        "codeLink": "https://www.dropbox.com/s/bi5s4yqzaqk7jxs/WeatherApp.zip?dl=0&raw=1",
         "link": "https://www.udemy.com/course/complete-weather-app-in-swiftui-mvvm-lottie-animation/?couponCode=" + saleCode
     },
     {
@@ -276,7 +277,13 @@ var saleCode = monthNames[d.getMonth()] + "WebSale";
   while (i <= courses.course.length + 1) {
     var elem = "<div class='row'>"
     //$("#courseList").append("<div class='row'>");
-    elem = elem + "<div class='card col-md-5'><img src='"+courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>"+ courses.course[i]["desc"] + " <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a></div></div>";
+    elem = elem + "<div class='card col-md-5'><img src='"+courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>"+ courses.course[i]["desc"] + " <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a>";
+
+    if (courses.course[i]["codeLink"]) {
+      elem = elem + "<a class='btn' href='"+courses.course[i]["codeLink"]+"'>Source Code</a></div></div>";
+    } else {
+      elem = elem + "</div></div>";
+    }
 
     i = i + 1;
 
@@ -286,7 +293,14 @@ var saleCode = monthNames[d.getMonth()] + "WebSale";
     //  return;
     }
 
-    elem = elem + "<div class='card col-md-5'><img src='"+ courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>" + courses.course[i]["desc"]+" <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a></div></div>";
+    elem = elem + "<div class='card col-md-5'><img src='"+ courses.course[i]["image"]+"' alt='"+courses.course[i]["name"]+"' class='card-img-top'>" + "<div class='card-body'><h4>"+courses.course[i]["name"]+"</h4><p class = 'text'>" + courses.course[i]["desc"]+" <br> <br></p><a class='btn btn-primary' href='"+courses.course[i]["link"]+"' target='_blank'>View Course</a>";
+
+    if (courses.course[i]["codeLink"]) {
+      elem = elem + "<a class='btn' href='"+courses.course[i]["codeLink"]+"'>Source Code</a></div></div>";
+    } else {
+      elem = elem + "</div></div>";
+    }
+
     elem = elem + "</div>";
 
     $("#courseList").append(elem);
@@ -348,6 +362,10 @@ var saleCode = monthNames[d.getMonth()] + "WebSale";
 <div class="container">
   <div class="d-flex justify-content-center">
       <h2>Contact us: <a href="mailto:devtechieinteractive@gmail.com">DevTechieInteractive@gmail.com</a></h2>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a href="privacy.html" target="_blank">Privacy Policy</a> |
+    <a href="tos.html" target="_blank">Terms of Service</a>
   </div>
 </div>
 </section>
