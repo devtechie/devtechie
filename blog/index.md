@@ -1,6 +1,7 @@
-[DevTechie.com](https://www.devtechie.com)
-
 # SwiftUI Blog
+
+<[DevTechie.com](https://www.devtechie.com)
+
 
 ## SwiftUI Layouts - VStack
 
