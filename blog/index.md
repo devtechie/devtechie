@@ -1,4 +1,4 @@
-# Back to [DevTechie.com](https://www.devtechie.com)
+[DevTechie.com](https://www.devtechie.com)
 
 # SwiftUI Blog
 
