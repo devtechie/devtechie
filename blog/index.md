@@ -7,7 +7,7 @@
 
 SwiftUI has three basic layouts: VStack, HStack and ZStack. There are lazy version of VStack and HStack also available. 
 
-#VStack
+# VStack
 
 Let's start with VStack. VStack is a view that arranges its child views in a vertical line. 
 
@@ -26,7 +26,7 @@ struct VStackExample: View {
 ```
 In this example, we have 5 Text views arranged in vertical line.
 
-#HStack
+# HStack 
 
 HStack arranges its child views in a horizontal line.
 
@@ -41,7 +41,7 @@ struct HStackExample: View {
 }
 ```
 
-#ZStack
+# ZStack
 
 ZStack arranges its child views in z space or in other word they are layed out on the top of each other.
 ```swift
